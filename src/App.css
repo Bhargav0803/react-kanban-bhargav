@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ticketwindow{
+  padding-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  background-color:lightgray;
+}
+
+header{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: whitesmoke;
+  padding: 0 100px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.idclass{
+  text-align: start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header a{
+  color: black;
+  text-decoration: none;
+  font-size: large;
+}
+
+
+header ul{
+  position: relative;
+}
+
+header ul li{
+  position: relative;
+  list-style: none;
+  float: left;
+}
+
+header ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 2px 30px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+}
+header ul li a:hover{
+  background-color: lightgray;
+}
+
+header ul li ul{
+  position: absolute;
+  display: none;
+  background-color: whitesmoke;
+  text-decoration-color: black;
+  left:0;
+  width:200px;
+  
+}
+
+header ul li:hover ul{
+  display: block;
+}
+
+header ul li ul li{
+  position: relative;
+  width: 100%;
+  border: 1px solid;
+  
+}
+
+.ticket{
+  background-color: white;
+  text-align: left;
+  height:80px;
+  width:240px;
+  margin:8px 0 8px 0;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+p {
+  font-family: verdana;
+  font-size: 10px;
+  margin: 2px 0 2px 0;
+}
+.ticket ul li{
+  list-style: none;
+  font-size: x-small;
+  font-weight: 700;
+}
+
+.inline1{
+ display:flex;
+ justify-content:start;
+ gap:5px;
+ margin: 2px 0 2px 0;
+
+}
+
+.kanban{
+  display:flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.kanban_column{
+  flex: 1;
+  border: 1px solid #ccc;
+  /* max-width: 200px; */
+}
+
+/* .kanban_column:not(:last-child){
+  margin-right: 10px;
+} */
+
+.kanban_col_title{
+  margin-bottom: 20px;
+  /* font-size: 20px; */
+  user-select: none;
 }
